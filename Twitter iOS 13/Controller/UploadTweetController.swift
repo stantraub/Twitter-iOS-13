@@ -31,7 +31,7 @@ class UploadTweetController: UIViewController {
         let iv = UIImageView()
         iv.contentMode = .scaleAspectFill
         iv.clipsToBounds = true
-        iv.setDimensions(height: 48, width: 48)
+        iv.setDimensions(width: 48, height: 48)
         iv.layer.cornerRadius = 48 / 2
         return iv
     }()

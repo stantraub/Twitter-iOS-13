@@ -30,6 +30,12 @@ class FeedController: UICollectionViewController {
         fetchTweets()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.barStyle = .default
+        navigationController?.navigationBar.isHidden = false
+    }
+    
     //MARK: - API
     
     func fetchTweets() {
@@ -48,7 +54,7 @@ class FeedController: UICollectionViewController {
         
         let imageView = UIImageView(image: UIImage(named: "twitter_logo_blue"))
         imageView.contentMode = .scaleAspectFit
-        imageView.setDimensions(height: 44, width: 44)
+        imageView.setDimensions(width: 44, height: 44)
         navigationItem.titleView = imageView
     }
     
@@ -57,7 +63,7 @@ class FeedController: UICollectionViewController {
     func configureLeftBarButton() {
         guard let user = user else { return }
         let profileImageView = UIImageView()
-        profileImageView.setDimensions(height: 32, width: 32)
+        profileImageView.setDimensions(width: 32, height: 32)
         profileImageView.layer.cornerRadius = 32 / 2
         profileImageView.layer.masksToBounds = true
         
@@ -76,7 +82,7 @@ extension FeedController {
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifer, for: indexPath) as! TweetCell
-        
+        cell.delegate = self
         cell.tweet = tweets[indexPath.row]
         
         return cell
@@ -92,9 +98,10 @@ extension FeedController: UICollectionViewDelegateFlowLayout {
 }
 
 extension FeedController: TweetCellDelegate {
-    func handleProfileImageTapped() {
-        <#code#>
+    func handleProfileImageTapped(_ cell: TweetCell) {
+        guard let user = cell.tweet?.user else { return }
+        let controller = ProfileController(user: user)
+        navigationController?.pushViewController(controller, animated: true)
     }
-    
     
 }

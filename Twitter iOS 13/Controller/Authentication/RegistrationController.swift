@@ -134,7 +134,7 @@ class RegistrationController: UIViewController {
         
         view.addSubview(plusPhotoButton)
         plusPhotoButton.centerX(inView: view, topAnchor: view.safeAreaLayoutGuide.topAnchor)
-        plusPhotoButton.setDimensions(height: 128, width: 128)
+        plusPhotoButton.setDimensions(width: 128, height: 128)
 
         let stack = UIStackView(arrangedSubviews: [emailContainerView,
                                                    passwordContainerView,
