@@ -23,7 +23,7 @@ struct TweetService {
         
         let ref = REF_TWEETS.childByAutoId()
         
-        ref.childByAutoId().updateChildValues(values) { (err, ref) in
+        ref.updateChildValues(values) { (err, ref) in
             // update user-tweet structure after tweet upload completes
             guard let tweetID = ref.key else { return }
             REF_USER_TWEETS.child(uid).updateChildValues([tweetID: 1], withCompletionBlock: completion)
@@ -52,9 +52,9 @@ struct TweetService {
        var tweets = [Tweet]()
         
         REF_USER_TWEETS.child(user.uid).observe(.childAdded) { snapshot in
-            let tweetId = snapshot.key
+            let tweetID = snapshot.key
             
-            REF_TWEETS.child(tweetId).observeSingleEvent(of: .value) { snapshot in
+            REF_TWEETS.child(tweetID).observeSingleEvent(of: .value) { snapshot in
                 guard let dictionary = snapshot.value as? [String: Any] else { return }
                 guard let uid = dictionary["uid"] as? String else { return }
                 
