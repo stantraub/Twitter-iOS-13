@@ -45,6 +45,7 @@
 		11A5ECF624D3363F00C41A3C /* ActionSheetLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A5ECF524D3363F00C41A3C /* ActionSheetLauncher.swift */; };
 		11A5ECF824D3524200C41A3C /* ActionSheetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A5ECF724D3524200C41A3C /* ActionSheetCell.swift */; };
 		11A5ECFA24D39C8700C41A3C /* ActionSheetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A5ECF924D39C8700C41A3C /* ActionSheetViewModel.swift */; };
+		11A5ECFC24D6630900C41A3C /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A5ECFB24D6630900C41A3C /* Notification.swift */; };
 		36D1CCCAA7631C0103B5C19F /* Pods_Twitter_iOS_13.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8494C8DEE7B365A29F66D08 /* Pods_Twitter_iOS_13.framework */; };
 /* End PBXBuildFile section */
 
@@ -89,6 +90,7 @@
 		11A5ECF524D3363F00C41A3C /* ActionSheetLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheetLauncher.swift; sourceTree = "<group>"; };
 		11A5ECF724D3524200C41A3C /* ActionSheetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheetCell.swift; sourceTree = "<group>"; };
 		11A5ECF924D39C8700C41A3C /* ActionSheetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheetViewModel.swift; sourceTree = "<group>"; };
+		11A5ECFB24D6630900C41A3C /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		1CE2AF6A22BC850D5F77B140 /* Pods-Twitter iOS 13.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Twitter iOS 13.debug.xcconfig"; path = "Target Support Files/Pods-Twitter iOS 13/Pods-Twitter iOS 13.debug.xcconfig"; sourceTree = "<group>"; };
 		4822BA6C86FAD82DFFDD8375 /* Pods-Twitter iOS 13.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Twitter iOS 13.release.xcconfig"; path = "Target Support Files/Pods-Twitter iOS 13/Pods-Twitter iOS 13.release.xcconfig"; sourceTree = "<group>"; };
 		B8494C8DEE7B365A29F66D08 /* Pods_Twitter_iOS_13.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Twitter_iOS_13.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -201,6 +203,7 @@
 			children = (
 				114C84FA24CCA36C003DE253 /* User.swift */,
 				114C850324CD57FC003DE253 /* Tweet.swift */,
+				11A5ECFB24D6630900C41A3C /* Notification.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -384,6 +387,7 @@
 				1192A51D24B1ADBB00A5626F /* NotificationsController.swift in Sources */,
 				11A5ECEC24D0BF9E00C41A3C /* UserCell.swift in Sources */,
 				1192A4FF24B1839D00A5626F /* Twitter_iOS_13.xcdatamodeld in Sources */,
+				11A5ECFC24D6630900C41A3C /* Notification.swift in Sources */,
 				114C850624CDF8E8003DE253 /* TweetCell.swift in Sources */,
 				1192A51B24B1ADB200A5626F /* ExploreController.swift in Sources */,
 				114C84F924CCA039003DE253 /* UserService.swift in Sources */,
