@@ -47,6 +47,8 @@
 		11A5ECFA24D39C8700C41A3C /* ActionSheetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A5ECF924D39C8700C41A3C /* ActionSheetViewModel.swift */; };
 		11A5ECFC24D6630900C41A3C /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A5ECFB24D6630900C41A3C /* Notification.swift */; };
 		11A5ECFE24D75C4E00C41A3C /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A5ECFD24D75C4E00C41A3C /* NotificationService.swift */; };
+		11C43DD724D8710C00CFCFA4 /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C43DD624D8710C00CFCFA4 /* NotificationCell.swift */; };
+		11C7AA5E24D8F97D0007AA1A /* NotificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C7AA5D24D8F97D0007AA1A /* NotificationViewModel.swift */; };
 		36D1CCCAA7631C0103B5C19F /* Pods_Twitter_iOS_13.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8494C8DEE7B365A29F66D08 /* Pods_Twitter_iOS_13.framework */; };
 /* End PBXBuildFile section */
 
@@ -93,6 +95,8 @@
 		11A5ECF924D39C8700C41A3C /* ActionSheetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheetViewModel.swift; sourceTree = "<group>"; };
 		11A5ECFB24D6630900C41A3C /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		11A5ECFD24D75C4E00C41A3C /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		11C43DD624D8710C00CFCFA4 /* NotificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
+		11C7AA5D24D8F97D0007AA1A /* NotificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewModel.swift; sourceTree = "<group>"; };
 		1CE2AF6A22BC850D5F77B140 /* Pods-Twitter iOS 13.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Twitter iOS 13.debug.xcconfig"; path = "Target Support Files/Pods-Twitter iOS 13/Pods-Twitter iOS 13.debug.xcconfig"; sourceTree = "<group>"; };
 		4822BA6C86FAD82DFFDD8375 /* Pods-Twitter iOS 13.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Twitter iOS 13.release.xcconfig"; path = "Target Support Files/Pods-Twitter iOS 13/Pods-Twitter iOS 13.release.xcconfig"; sourceTree = "<group>"; };
 		B8494C8DEE7B365A29F66D08 /* Pods_Twitter_iOS_13.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Twitter_iOS_13.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -121,6 +125,7 @@
 				11A5ECEB24D0BF9E00C41A3C /* UserCell.swift */,
 				11A5ECF124D1EBB000C41A3C /* TweetHeader.swift */,
 				11A5ECF724D3524200C41A3C /* ActionSheetCell.swift */,
+				11C43DD624D8710C00CFCFA4 /* NotificationCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -156,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				1192A50D24B183DD00A5626F /* Model */,
+				114C84FC24CCA537003DE253 /* View */,
 				1192A50C24B183DA00A5626F /* ViewModel */,
 				1192A50B24B183C900A5626F /* Controller */,
 				1192A50E24B1849B00A5626F /* API */,
@@ -195,6 +201,7 @@
 				11A5ECB824CF7E9F00C41A3C /* ProfileHeaderViewModel.swift */,
 				11A5ECF324D24D6100C41A3C /* UploadTweetViewModel.swift */,
 				11A5ECF924D39C8700C41A3C /* ActionSheetViewModel.swift */,
+				11C7AA5D24D8F97D0007AA1A /* NotificationViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -205,7 +212,6 @@
 				114C84FA24CCA36C003DE253 /* User.swift */,
 				114C850324CD57FC003DE253 /* Tweet.swift */,
 				11A5ECFB24D6630900C41A3C /* Notification.swift */,
-				114C84FC24CCA537003DE253 /* View */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -399,8 +405,10 @@
 				11A5ECF424D24D6100C41A3C /* UploadTweetViewModel.swift in Sources */,
 				11A5ECF624D3363F00C41A3C /* ActionSheetLauncher.swift in Sources */,
 				117EEC3324B688F80063A8B5 /* LoginController.swift in Sources */,
+				11C43DD724D8710C00CFCFA4 /* NotificationCell.swift in Sources */,
 				11A5ECFA24D39C8700C41A3C /* ActionSheetViewModel.swift in Sources */,
 				114C84F724CC07D2003DE253 /* AuthService.swift in Sources */,
+				11C7AA5E24D8F97D0007AA1A /* NotificationViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
