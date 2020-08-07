@@ -75,6 +75,13 @@ class TweetHeader: UICollectionReusableView {
         return button
     }()
     
+    private let replyLabel: UILabel = {
+        let label = UILabel()
+        label.textColor = .lightGray
+        label.font = UIFont.systemFont(ofSize: 12)
+        return label
+    }()
+    
     private lazy var retweetsLabel = UILabel()
     
     private lazy var likesLabel = UILabel()
@@ -138,14 +145,19 @@ class TweetHeader: UICollectionReusableView {
         labelStack.axis = .vertical
         labelStack.spacing = -6
         
-        let stack = UIStackView(arrangedSubviews: [profileImageView, labelStack])
-        stack.spacing = 12
+        let imageCaptionStack = UIStackView(arrangedSubviews: [profileImageView, labelStack])
+        imageCaptionStack.spacing = 12
+        
+        let stack = UIStackView(arrangedSubviews: [replyLabel, imageCaptionStack])
+        stack.axis = .vertical
+        stack.spacing = 8
+        stack.distribution = .fillProportionally
         
         addSubview(stack)
         stack.anchor(top: topAnchor, left: leftAnchor, paddingTop: 16, paddingLeft: 16)
         
         addSubview(captionLabel)
-        captionLabel.anchor(top: stack.bottomAnchor, left: leftAnchor, right: rightAnchor, paddingTop: 12, paddingLeft: 16, paddingRight: 16)
+        captionLabel.anchor(top: imageCaptionStack.bottomAnchor, left: leftAnchor, right: rightAnchor, paddingTop: 12, paddingLeft: 16, paddingRight: 16)
         
         addSubview(dateLabel)
         dateLabel.anchor(top: captionLabel.bottomAnchor, left: leftAnchor, paddingTop: 20, paddingLeft: 16)
@@ -222,6 +234,9 @@ class TweetHeader: UICollectionReusableView {
         likesLabel.attributedText = viewModel.likesAttributedString
         likeButton.setImage(viewModel.likeButtonImage, for: .normal)
         likeButton.tintColor = viewModel.likeButtonTintColor
+        
+        replyLabel.isHidden = viewModel.shouldHideReplyLabel
+        replyLabel.text = viewModel.replyText
         
     }
 }

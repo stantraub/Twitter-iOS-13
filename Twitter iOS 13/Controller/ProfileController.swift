@@ -47,6 +47,8 @@ class ProfileController: UICollectionViewController {
         super.viewDidLoad()
         configureCollectionView()
         fetchTweets()
+        fetchLikedTweets()
+        fetchReplies()
         checkIfUserIsFollowed()
         fetchUserStats()
     }
@@ -63,6 +65,18 @@ class ProfileController: UICollectionViewController {
         TweetService.shared.fetchTweets(forUser: user) { tweets in
             self.tweets = tweets
             self.collectionView.reloadData()
+        }
+    }
+    
+    func fetchLikedTweets() {
+        TweetService.shared.fetchLikes(forUser: user) { tweets in
+            self.likedTweets = tweets
+        }
+    }
+    
+    func fetchReplies() {
+        TweetService.shared.fetchReplies(forUser: user) { tweets in
+            self.replies = tweets
         }
     }
     
@@ -90,6 +104,9 @@ class ProfileController: UICollectionViewController {
         collectionView.register(ProfileHeader.self,
                                 forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
                                 withReuseIdentifier: headerIdentifier)
+        
+        guard let tabHeight = tabBarController?.tabBar.frame.height else { return }
+        collectionView.contentInset.bottom = tabHeight
     }
 }
 
@@ -116,11 +133,20 @@ extension ProfileController {
         header.delegate = self
         return header
     }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let controller = TweetController(tweet: currentDataSource[indexPath.row])
+        navigationController?.pushViewController(controller, animated: true)
+    }
 }
 
 //MARK: - ProfileHeaderDelegate
 
 extension ProfileController: ProfileHeaderDelegate {
+    func didSelect(filter: ProfileFilterOptions) {
+        self.selectedFilter = filter
+    }
+    
     func handleEditProfileFollow(_ header: ProfileHeader) {
         
         if user.isCurrentUser {
@@ -158,7 +184,14 @@ extension ProfileController: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: view.frame.width, height: 120)
+        let viewModel = TweetViewModel(tweet: currentDataSource[indexPath.row])
+        var height = viewModel.size(forWidth: view.frame.width).height + 72
+        
+        if currentDataSource[indexPath.row].isReply {
+            height += 20
+        }
+        
+        return CGSize(width: view.frame.width, height: height)
     }
 }
 
