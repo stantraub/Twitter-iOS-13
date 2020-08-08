@@ -49,6 +49,10 @@
 		11A5ECFE24D75C4E00C41A3C /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A5ECFD24D75C4E00C41A3C /* NotificationService.swift */; };
 		11C43DD724D8710C00CFCFA4 /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C43DD624D8710C00CFCFA4 /* NotificationCell.swift */; };
 		11C7AA5E24D8F97D0007AA1A /* NotificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C7AA5D24D8F97D0007AA1A /* NotificationViewModel.swift */; };
+		11F692B224DDC52B00FBE1D3 /* EditProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F692B124DDC52B00FBE1D3 /* EditProfileController.swift */; };
+		11F692B524DDC72D00FBE1D3 /* EditProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F692B424DDC72D00FBE1D3 /* EditProfileHeader.swift */; };
+		11F692B724DE4D6C00FBE1D3 /* EditProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F692B624DE4D6C00FBE1D3 /* EditProfileViewModel.swift */; };
+		11F692B924DE4DD200FBE1D3 /* EditProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F692B824DE4DD200FBE1D3 /* EditProfileCell.swift */; };
 		36D1CCCAA7631C0103B5C19F /* Pods_Twitter_iOS_13.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8494C8DEE7B365A29F66D08 /* Pods_Twitter_iOS_13.framework */; };
 /* End PBXBuildFile section */
 
@@ -97,6 +101,10 @@
 		11A5ECFD24D75C4E00C41A3C /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		11C43DD624D8710C00CFCFA4 /* NotificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
 		11C7AA5D24D8F97D0007AA1A /* NotificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewModel.swift; sourceTree = "<group>"; };
+		11F692B124DDC52B00FBE1D3 /* EditProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileController.swift; sourceTree = "<group>"; };
+		11F692B424DDC72D00FBE1D3 /* EditProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileHeader.swift; sourceTree = "<group>"; };
+		11F692B624DE4D6C00FBE1D3 /* EditProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewModel.swift; sourceTree = "<group>"; };
+		11F692B824DE4DD200FBE1D3 /* EditProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileCell.swift; sourceTree = "<group>"; };
 		1CE2AF6A22BC850D5F77B140 /* Pods-Twitter iOS 13.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Twitter iOS 13.debug.xcconfig"; path = "Target Support Files/Pods-Twitter iOS 13/Pods-Twitter iOS 13.debug.xcconfig"; sourceTree = "<group>"; };
 		4822BA6C86FAD82DFFDD8375 /* Pods-Twitter iOS 13.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Twitter iOS 13.release.xcconfig"; path = "Target Support Files/Pods-Twitter iOS 13/Pods-Twitter iOS 13.release.xcconfig"; sourceTree = "<group>"; };
 		B8494C8DEE7B365A29F66D08 /* Pods_Twitter_iOS_13.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Twitter_iOS_13.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,11 +125,9 @@
 		114C84FC24CCA537003DE253 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				11F692B324DDC70500FBE1D3 /* Profile */,
 				114C84FF24CCE2E9003DE253 /* CaptionTextView.swift */,
 				114C850524CDF8E8003DE253 /* TweetCell.swift */,
-				11A5ECB224CE97A900C41A3C /* ProfileHeader.swift */,
-				11A5ECB424CF6C0C00C41A3C /* ProfileFilterView.swift */,
-				11A5ECB624CF6EF200C41A3C /* ProfileFilterCell.swift */,
 				11A5ECEB24D0BF9E00C41A3C /* UserCell.swift */,
 				11A5ECF124D1EBB000C41A3C /* TweetHeader.swift */,
 				11A5ECF724D3524200C41A3C /* ActionSheetCell.swift */,
@@ -190,6 +196,7 @@
 				114C84FD24CCBEFE003DE253 /* UploadTweetController.swift */,
 				11A5ECB024CE3F9200C41A3C /* ProfileController.swift */,
 				11A5ECEF24D1EA1300C41A3C /* TweetController.swift */,
+				11F692B124DDC52B00FBE1D3 /* EditProfileController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -202,6 +209,7 @@
 				11A5ECF324D24D6100C41A3C /* UploadTweetViewModel.swift */,
 				11A5ECF924D39C8700C41A3C /* ActionSheetViewModel.swift */,
 				11C7AA5D24D8F97D0007AA1A /* NotificationViewModel.swift */,
+				11F692B624DE4D6C00FBE1D3 /* EditProfileViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -236,6 +244,18 @@
 				11A5ECF524D3363F00C41A3C /* ActionSheetLauncher.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		11F692B324DDC70500FBE1D3 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				11A5ECB224CE97A900C41A3C /* ProfileHeader.swift */,
+				11A5ECB424CF6C0C00C41A3C /* ProfileFilterView.swift */,
+				11A5ECB624CF6EF200C41A3C /* ProfileFilterCell.swift */,
+				11F692B424DDC72D00FBE1D3 /* EditProfileHeader.swift */,
+				11F692B824DE4DD200FBE1D3 /* EditProfileCell.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		84958139ECCCF9B411165EA7 /* Pods */ = {
@@ -373,12 +393,15 @@
 			files = (
 				1192A4F524B1839D00A5626F /* AppDelegate.swift in Sources */,
 				114C850224CD5174003DE253 /* TweetService.swift in Sources */,
+				11F692B524DDC72D00FBE1D3 /* EditProfileHeader.swift in Sources */,
 				1192A4F724B1839D00A5626F /* SceneDelegate.swift in Sources */,
 				114C850024CCE2E9003DE253 /* CaptionTextView.swift in Sources */,
 				11A5ECFE24D75C4E00C41A3C /* NotificationService.swift in Sources */,
 				1192A51F24B1ADCE00A5626F /* ConversationsController.swift in Sources */,
 				1192A51924B1AD7E00A5626F /* FeedController.swift in Sources */,
 				114C84FE24CCBEFE003DE253 /* UploadTweetController.swift in Sources */,
+				11F692B924DE4DD200FBE1D3 /* EditProfileCell.swift in Sources */,
+				11F692B224DDC52B00FBE1D3 /* EditProfileController.swift in Sources */,
 				11A5ECF824D3524200C41A3C /* ActionSheetCell.swift in Sources */,
 				114C84FB24CCA36C003DE253 /* User.swift in Sources */,
 				11A5ECB524CF6C0C00C41A3C /* ProfileFilterView.swift in Sources */,
@@ -398,6 +421,7 @@
 				11A5ECEC24D0BF9E00C41A3C /* UserCell.swift in Sources */,
 				1192A4FF24B1839D00A5626F /* Twitter_iOS_13.xcdatamodeld in Sources */,
 				11A5ECFC24D6630900C41A3C /* Notification.swift in Sources */,
+				11F692B724DE4D6C00FBE1D3 /* EditProfileViewModel.swift in Sources */,
 				114C850624CDF8E8003DE253 /* TweetCell.swift in Sources */,
 				1192A51B24B1ADB200A5626F /* ExploreController.swift in Sources */,
 				114C84F924CCA039003DE253 /* UserService.swift in Sources */,
