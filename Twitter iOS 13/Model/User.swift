@@ -14,6 +14,7 @@ struct User {
     let email: String
     let username: String
     var profileImageUrl: URL?
+    var bio: String?
     let uid: String
     var isFollowed = false
     var stats: UserRelationStats?
@@ -26,7 +27,10 @@ struct User {
         self.fullname = dictionary["fullname"] as? String ?? ""
         self.email = dictionary["email"] as? String ?? ""
         self.username = dictionary["username"] as? String ?? ""
-        
+            
+        if let bio = dictionary["bio"] as? String {
+            self.bio = bio
+        }
         if let profileImageUrlString = dictionary["profileImageUrl"] as? String {
             guard let url = URL(string: profileImageUrlString) else { return }
             self.profileImageUrl = url

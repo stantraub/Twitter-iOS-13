@@ -67,7 +67,7 @@ class UploadTweetController: UIViewController {
         super.viewDidLoad()
         
         configureUI()
-        configureMentionHandler()   
+       
     }
     
     //MARK: - Selectors
