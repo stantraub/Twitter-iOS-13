@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 private let reuseIdentifier = "TweetCell"
 private let headerIdentifier = "ProfileHeader"
@@ -202,6 +203,19 @@ extension ProfileController: UICollectionViewDelegateFlowLayout {
         }
         
         return CGSize(width: view.frame.width, height: height)
+    }
+}
+
+extension ProfileController: EditProfileControllerDelegate {
+    func handleLogout() {
+        do {
+            try Auth.auth().signOut()
+            let nav = UINavigationController(rootViewController: LoginController()) //nav controller because if it was just LoginController it would let us switch between screens
+            nav.modalPresentationStyle = .fullScreen
+            self.present(nav, animated: true, completion: nil)
+        } catch let error {
+            print("DEBUG: Failde to sign out with error \(error.localizedDescription)")
+        }
     }
 }
 

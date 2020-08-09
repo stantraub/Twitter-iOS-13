@@ -65,13 +65,6 @@ class MainTabController: UITabBarController {
         }
     }
     
-    func logUserOut() {
-        do {
-            try Auth.auth().signOut()
-        } catch let error {
-            print("DEBUG: Failde to sign out with error \(error.localizedDescription)")
-        }
-    }
     
     //MARK: - Selectors
     
